@@ -39,12 +39,6 @@ createApp({
     }
   },
 
-  created(){
-    setInterval(() => {
-      this.curIndex++
-    }, 3000)
-  },
-
   methods: {
     next: function() {
       if(this.curIndex === this.images.length - 1) {
@@ -63,7 +57,14 @@ createApp({
     showThisImg: function(index){
       this.curIndex = index;
     }
-  }
+  },
+
+  created(){
+    // Al load della pagina, si attiva la funzione next ogni 3 secondi
+    setInterval(() => {
+      this.next()
+    }, 3000)
+  },
 
 
 }).mount("#app");
