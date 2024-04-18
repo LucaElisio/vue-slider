@@ -53,6 +53,9 @@ createApp({
       } else {
         this.curIndex--
       }
+    },
+    showThisImg: function(index){
+      this.curIndex = index;
     }
   }
 

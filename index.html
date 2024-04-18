@@ -83,6 +83,7 @@
                     class="img-fluid my-thumbnail" :class="curIndex === index ? 'active' : '' "
                     :src="curImg.image"
                     alt="Thumbnail picture"
+                    @click="showThisImg(index)"
                   />
                 </div>
               </div>
