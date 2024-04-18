@@ -39,6 +39,12 @@ createApp({
     }
   },
 
+  created(){
+    setInterval(() => {
+      this.curIndex++
+    }, 3000)
+  },
+
   methods: {
     next: function() {
       if(this.curIndex === this.images.length - 1) {
