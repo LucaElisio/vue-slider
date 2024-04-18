@@ -78,11 +78,11 @@
                   </div>
 
 
-                  <!-- immagini interne -->
+                  <!-- Creazione Thumbnail tramite v-for, inserimento classe active solo se i due indici corrispondono -->
                   <img v-for="(curImg, index) in images"
-                    class="img-fluid my-thumbnail active"
+                    class="img-fluid my-thumbnail" :class="curIndex === index ? 'active' : '' "
                     :src="curImg.image"
-                    alt="Thumbnail of Marvel's Spiderman Miles Morale picture"
+                    alt="Thumbnail picture"
                   />
                 </div>
               </div>
